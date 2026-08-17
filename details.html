@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        header {
+
+            font-family: 'Dancing Script', cursive, serif;
+            background-color: #2c5d63;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 5px; 
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .product-box {
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 280px; 
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 5px; 
+        }
+
+        .product-box:hover {
+            transform: scale(1.05);
+        }
+
+        .product-box img {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+        }
+
+        .product-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .see-more-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease-in-out;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .see-more-btn:hover {
+            background-color: #218838;
+        }
+
+        .discount-section {
+            margin-top: 0;
+            padding: 100px 0; 
+            background: url('b2.avif') center bottom/cover no-repeat;
+            color: white;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 320px; 
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .discount-header {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: darkgreen;
+        }
+
+        .discount-tag {
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #f44336;
+            padding: 20px 40px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .blur-box {
+            position: absolute;
+            width: 300px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: none;
+            animation: fadeIn 1.5s ease-in-out, moveUp 1.5s ease-in-out;
+            text-align: center;
+        }
+        .blur-box1 {
+    position: absolute;
+    top: 60%; 
+    left: 45%; 
+}
+
+.blur-box2 {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes moveUp {
+            0% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Product Details & Prices</h1>
+    </header>
+
+    <div class="products-container">
+        <div class="product-box">
+            <img src="g.jpeg" alt="Green Tea">
+            <div class="product-name">Green Tea</div>
+            <div class="product-price">Rs.2000 per pack</div>
+        </div>
+        <div class="product-box">
+            <img src="b.webp" alt="Black Tea">
+            <div class="product-name">Black Tea</div>
+            <div class="product-price">Rs.2500 per pack</div>
+        </div>
+        <div class="product-box">
+            <img src="h.jpg" alt="Herbal Tea">
+            <div class="product-name">Herbal Tea</div>
+            <div class="product-price">Rs.2200 per pack</div>
+        </div>
+        <div class="product-box">
+            <img src="i.jpg" alt="Ice Tea">
+            <div class="product-name">Ice Tea</div>
+            <div class="product-price">Rs.1500 per pack</div>
+        </div>
+        <div class="product-box">
+            <img src="r.jpg" alt="Regular Tea">
+            <div class="product-name">Regular Tea</div>
+            <div class="product-price">Rs.1000 per pack</div>
+        </div>
+    </div>
+
+    <div class="discount-section">
+        <div class="discount-header">
+            <h2>Exclusive Offer! Save More on Your Favorite Teas!</h2>
+            <p>Get up to 30% off on select packs. Hurry, limited time only!</p>
+        </div>
+        <div class="discount-tag">30% OFF</div>
+        <div class="blur-box blur-box1">Buy 2 Get 1 Free on Herbal Tea!</div>
+        <div class="blur-box blur-box2">Special Discount on Bulk Orders - Save 20%!</div>
+        <a href="products.html" class="see-more-btn">Back to Products</a>
+    </div>
+</body>
+</html>
+
+
